@@ -1,0 +1,72 @@
+body {
+  background-color: #845AFC;
+  display: flex;
+  justify-content: center;  /* center horizontally */
+  height: 100vh;
+  margin: 5%;                
+}
+
+.container {
+  text-align: center;
+  background-color: #1B1A41;
+  color: white;
+  padding: 20px;
+  width: 500px;             /* set a reasonable fixed width */
+  box-sizing: border-box;  /* so padding doesn't overflow */
+}
+form input,form button {
+  border: 2px solid #845AFC;
+ color: white;
+ padding: 2%;
+ margin-top: 5%;
+
+}
+form input {
+   background-color: #1B1A41;
+   width: 74%;          /* full width */
+}
+form button {
+  background-color: #845AFC;
+  cursor: pointer;
+}
+.todo-form {
+  margin-bottom: 40px;
+}
+.todo-form input {
+  outline: none;
+}
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color:#845AFC;
+  border: 1px solid #845AFC;
+  color: white;
+  margin: 10px;
+  margin-top: 20px;
+  cursor: pointer; /* Change cursor to pointer for better UX */
+  border-radius: 5px; /* Optional: to give a rounded corner effect */
+}
+
+.todo-icons {
+  display: flex;
+  align-items: center;
+}
+
+.todo-icons svg {
+  margin-left: 5px;
+  cursor: pointer;
+}
+.todo p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.todo-task.completed {
+  text-decoration: line-through;
+  color: gray; /* Optional: to visually indicate it's completed */
+}
+
+
