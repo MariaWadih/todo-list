@@ -10,7 +10,7 @@ body {
   text-align: center;
   background-color: #1B1A41;
   color: white;
-  padding: 20px;
+  padding: 5%;
   width: 500px;             /* set a reasonable fixed width */
   box-sizing: border-box;  /* so padding doesn't overflow */
 }
@@ -23,7 +23,7 @@ form input,form button {
 }
 form input {
    background-color: #1B1A41;
-   width: 74%;          /* full width */
+   width: 75%;          /* full width */
 }
 form button {
   background-color: #845AFC;
@@ -70,21 +70,26 @@ form button {
 }
 
 @media (max-width: 600px) {
-  body {
-    margin: 2%;
-    height: auto;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .container {
+  html, body {
+    margin: 0;
+    padding: 0;
     width: 100%;
-    padding: 20px;        /* add padding to all sides */
-    padding-left: 5%;
-    padding-right: 5%;    /* adds space on left and right */
+    height: auto;
     box-sizing: border-box;
   }
 
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #845AFC;
+  }
+
+  .container {
+    width: 100vw;                 /* Force full viewport width */
+    padding: 5%;
+    box-sizing: border-box;
+    background-color: #1B1A41;
   }
 
   form input {
@@ -95,6 +100,7 @@ form button {
   form button {
     padding: 2% 4%;
   }
+
   .todo {
     flex-direction: row; 
     align-items: center;
