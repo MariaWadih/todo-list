@@ -1,73 +1,53 @@
-/* Global styles */
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: auto;
-  box-sizing: border-box;
-  overflow-x: hidden; /* 🔒 Prevent horizontal scroll */
-}
-
 body {
   background-color: #845AFC;
   display: flex;
-  justify-content: center;
-  min-height: 100vh;   /* Allows scrolling if needed */
-  padding: 20px;
+  justify-content: center;  /* center horizontally */
+  height: 100vh;
+  margin: 5%;                
 }
 
-/* Main container */
 .container {
   text-align: center;
   background-color: #1B1A41;
   color: white;
   padding: 5%;
-  width: 100%;
-  max-width: 500px;      /* Responsive width */
-  box-sizing: border-box;
+  width: 500px;             /* set a reasonable fixed width */
+  box-sizing: border-box;  /* so padding doesn't overflow */
 }
-
-/* Input and button styling */
-form input,
-form button {
+form input,form button {
   border: 2px solid #845AFC;
-  color: white;
-  padding: 2%;
-  margin-top: 5%;
-}
+ color: white;
+ padding: 2%;
+ margin-top: 5%;
 
+}
 form input {
-  background-color: #1B1A41;
-  width: 75%;
+   background-color: #1B1A41;
+   width: 75%;          /* full width */
 }
-
 form button {
   background-color: #845AFC;
   cursor: pointer;
 }
-
 .todo-form {
   margin-bottom: 40px;
 }
-
 .todo-form input {
   outline: none;
 }
-
-/* Todo styling */
 .todo {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-left: 10px;
   padding-right: 10px;
-  background-color: #845AFC;
+  background-color:#845AFC;
   border: 1px solid #845AFC;
   color: white;
-  margin: 10px 0;
-  cursor: pointer;
-  border-radius: 5px;
-  word-break: break-word;  /* ✅ Prevent overflow on long text */
+  margin: 10px;
+  margin-top: 20px;
+  cursor: pointer; /* Change cursor to pointer for better UX */
+  border-radius: 5px; /* Optional: to give a rounded corner effect */
 }
 
 .todo-icons {
@@ -79,63 +59,72 @@ form button {
   margin-left: 5px;
   cursor: pointer;
 }
-
 .todo p {
-  margin: 10px 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
   font-size: 18px;
 }
-
 .todo-task.completed {
   text-decoration: line-through;
-  color: gray;
+  color: gray; /* Optional: to visually indicate it's completed */
 }
 
-/* Mobile responsiveness */
 @media (max-width: 600px) {
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    overflow-x: hidden; 
+  }
+
   body {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
+    background-color: #845AFC;
   }
 
   .container {
-    width: 100%;         /* ✅ Replaced 100vw */
+    width: 100vw;                 /* Force full viewport width */
     padding: 5%;
     box-sizing: border-box;
-  }
-
-  form {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
+    background-color: #1B1A41;
   }
 
   form input {
-    width: 100%;
-    padding: 10px;
+    width: 65%;
+    padding: 2%;
   }
 
   form button {
-    width: 100%;
-    padding: 10px;
+    padding: 2% 4%;
   }
 
   .todo {
-    flex-direction: row;
+    flex-direction: row; 
     align-items: center;
     justify-content: space-between;
-    padding: 8px;
-    margin: 10px 0;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-right: 2px;
+    margin-left: 2px;
+  }
+
+  .todo-icons {
+    display: flex;
+    align-items: center;
   }
 
   .todo-icons svg {
     margin-left: 2px;
+    cursor: pointer;
   }
 
   .todo p {
     margin: 0;
-    font-size: 16px;
+    font-size: 18px;
     padding: 7px;
   }
 }
