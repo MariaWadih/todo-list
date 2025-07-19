@@ -78,7 +78,13 @@ form button {
   }
 
   .container {
-    width: 120%;
+    width: 100%;
+    padding: 20px;        /* add padding to all sides */
+    padding-left: 5%;
+    padding-right: 5%;    /* adds space on left and right */
+    box-sizing: border-box;
+  }
+
   }
 
   form input {
